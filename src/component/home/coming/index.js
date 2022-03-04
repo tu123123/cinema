@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 class coming extends React.Component{
     scrollTrendbottom=()=>{
         var scroll2=document.querySelector(".list-item");
@@ -11,12 +11,32 @@ class coming extends React.Component{
         var scroll2=document.querySelector(".list-item");
         var x=scroll2.scrollTop;
         scroll2.scrollTop=x-100;
-        
+       
+    }
+    state={
+        data:[
+            {
+                "sà":"sfaf"
+            }
+        ]
+    }
+   componentDidMount(){
+     
+        fetch("http://localhost:8000/movie")
+        .then(res=>{
+            return res.json()
+               })
+        .then(res=>{
+                this.setState({
+                    data:res
+                })
+                
+                   }) 
+    
     }
     render(){
         return(
             <div class="comingSoon">
-
             <div>PHIM SẮP CHIẾU</div>
             <div class="list-item">
             <div onClick={()=>this.scrollTrendbottom()} class="scrollTrend scrollbottom">
@@ -25,43 +45,24 @@ class coming extends React.Component{
             <div onClick={()=>this.scrollTrendtop()} class="scrollTrend scrolltop">
             <div>{">"}</div>
             </div>
-            
-            <div class="items">
-            <div class="img-coming"><img src="https://i.pinimg.com/originals/fc/c2/15/fcc215e7f62218e77f2758380b199d40.jpg" />
+            {
+                this.state.data.map(i=>
+              i.tinhtrang=="Chưa chiếu"?
+            <Link to={{pathname:`/detail/${i.name}`}} ><div class="items">
+            <div class="img-coming"><img src={i.img} />
             </div>
             <div class="detail">
-            <h3>Cross Road</h3>
-            <p>Thời gian dự kiến: 25/12/2012</p>
+            <h3>{i.name}</h3>
+            <p>Thời gian dự kiến: {i.time}</p>
             
             </div>
-            </div>
-            <div class="items">
-            <div class="img-coming"><img src="https://i.pinimg.com/originals/fc/c2/15/fcc215e7f62218e77f2758380b199d40.jpg" />
-            </div>
-            <div class="detail">
-            <h3>Cross Road</h3>
-            <p>Thời gian dự kiến: 25/12/2012</p>
+            </div></Link>
+            :""  
+                )
+            }
             
-            </div>
-            </div>
-            <div class="items">
-            <div class="img-coming"><img src="https://i.pinimg.com/originals/fc/c2/15/fcc215e7f62218e77f2758380b199d40.jpg" />
-            </div>
-            <div class="detail">
-            <h3>Cross Road</h3>
-            <p>Thời gian dự kiến: 25/12/2012</p>
             
-            </div>
-            </div>
-            <div class="items">
-            <div class="img-coming"><img src="https://i.pinimg.com/originals/fc/c2/15/fcc215e7f62218e77f2758380b199d40.jpg" />
-            </div>
-            <div class="detail">
-            <h3>Cross Road</h3>
-            <p>Thời gian dự kiến: 25/12/2012</p>
-            
-            </div>
-            </div>
+          
             </div></div>
         )
     }

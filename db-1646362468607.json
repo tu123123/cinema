@@ -1,0 +1,84 @@
+{
+  "movie": [
+    {
+      "name": "Cross Road",
+      "img": "https://i.pinimg.com/originals/fc/c2/15/fcc215e7f62218e77f2758380b199d40.jpg",
+      "detail": "",
+      "time": "12/2/2142",
+      "tinhtrang": "Chưa chiếu",
+      "theloai": "tình cảm, lãng mạng"
+    },
+    {
+      "name": "Spider Man",
+      "img": "https://media.vov.vn/uploaded/9eqrbt2uv7o/2019_06_23/poster_szfr.jpg",
+      "detail": "",
+      "time": "12/2/2242",
+      "tinhtrang": "Đang Công chiếu",
+      "theloai": "tình cảm, lãng mạng"
+    },
+    {
+      "name": "Your Name",
+      "img": "https://i.pinimg.com/originals/30/a4/65/30a465d7c817d81dcfeeb7c834d9dc1f.jpg",
+      "detail": "",
+      "time": "12/2/2242",
+      "tinhtrang": "Đang Công chiếu",
+      "theloai": "tình cảm, lãng mạng"
+    },
+    {
+      "name": "TenKi No Ko",
+      "img": "http://i.truyentranh8.net/2020/06-25/9ae1390e6f7702b7200373db00dda33b.jpg",
+      "detail": "Morishima Hodaka - một cậu học sinh năm nhất, chán ngấy với cuộc sống ở một hòn đảo hẻo lánh quyết bỏ nhà lên Tokyo. Trên đường băng qua đại dương bằng chiếc phà, bão lớn đánh vào phà, cậu được cứu bởi một người đàn ông trung niên tên Suga Keisuke. Keisuke đưa danh thiếp của mình cho cậu để tiện liên lạc. Tại Tokyo, Hodaka còn quá trẻ để xin việc hợp pháp, cậu không được nhận lần này đến lần khác, phải ở tạm một con hẻm với số tiền ít ỏi trong túi. Amano Hina - một cô gái chạc tuổi Hodaka, làm việc trong nhà ăn đã bắt gặp cậu và đưa cậu một chiếc bánh Hamburger vì cậu đã ăn ở đó trong ba đêm liên tiếp. Thời gian sau, Hodaka được Keisuke thuê làm một công việc ổn định cho tòa soạn của ông là soạn thảo những bài viết về các hiện tượng siêu nhiên. Cùng với người cháu của Keisuke là Natsumi tại tòa soạn, hai người họ khám phá truyền thuyết liên quan đến sự thay đổi thời tiết đột ngột ở Tokyo. Từ đó họ biết về truyền thuyết về 'cô gái nắng' và 'cô gái mưa', người con gái có khả năng điều khiển thời tiết.",
+      "time": "12/2/2242",
+      "tinhtrang": "Đang Công chiếu",
+      "theloai": "tình cảm, lãng mạng"
+    },
+    {
+      "name": "Tamako love story",
+      "img": "https://i.pinimg.com/736x/7b/38/d1/7b38d1c0be306607939d132170eb65b2.jpg",
+      "detail": "",
+      "time": "12/2/2242",
+      "tinhtrang": "Đang Công chiếu",
+      "theloai": "tình cảm, lãng mạng"
+    },
+    {
+      "name": "Josee, The Tiger and The Fish",
+      "img": "https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2020/11/josee_the_tiger_and-the-fish-1.jpg?resize=696%2C986&ssl=1",
+      "detail": "",
+      "time": "12/2/2242",
+      "tinhtrang": "Đang Công chiếu",
+      "theloai": "tình cảm, lãng mạng"
+    },
+    {
+      "name": "Kyoukai no Kanata",
+      "img": "https://i.pinimg.com/564x/3e/d8/20/3ed8207350bc3839364284ffb862cd92.jpg",
+      "detail": "",
+      "time": "12/4/2242",
+      "tinhtrang": "Chưa chiếu",
+      "theloai": "tình cảm, lãng mạng"
+    },
+    {
+      "name": "Wonder Egg Priority",
+      "img": "https://i.pinimg.com/564x/a6/46/16/a64616b6239c9b31a1ae170dec6b2541.jpg",
+      "detail": "",
+      "time": "12/2/2242",
+      "tinhtrang": "Chưa chiếu",
+      "theloai": "Kinh dị"
+    },
+    {
+      "name": "Tsukigakirei",
+      "img": "https://i.pinimg.com/564x/96/c5/2b/96c52b0e66eb7235fd3e863fd4a983e1.jpg",
+      "detail": "",
+      "time": "12/2/2242",
+      "tinhtrang": "đang chiếu",
+      "theloai": "Tình cảm"
+    },
+    {
+      "name": "Kakushigoto",
+      "img": "https://i.pinimg.com/564x/85/64/c6/8564c67c79f06cb874bd321a01c217a1.jpg",
+      "detail": "",
+      "time": "12/2/2242",
+      "tinhtrang": "đang chiếu",
+      "theloai": "Tình cảm"
+    }
+  ]
+}

@@ -13,6 +13,34 @@ class trend extends React.Component{
         scroll2.scrollLeft=x-269;
         
     }
+    state={
+        data:[
+            {
+                
+            }
+        ]
+    }
+    componentDidMount(){
+        setInterval(() => {
+            var scroll2=document.querySelector(".list-trend");
+        var x=scroll2.scrollLeft;
+        if(x>1000){
+            scroll2.scrollLeft=0;
+        }
+       scroll2.scrollLeft=x+269;  
+        }, 3000);
+        fetch("http://localhost:8000/movie")
+        .then(res=>{
+            return res.json()
+               })
+        .then(res=>{
+                this.setState({
+                    data:res
+                })
+                
+                   }) 
+    
+    }
     render(){
         return(
             <div  class="trending">
@@ -25,58 +53,20 @@ class trend extends React.Component{
             {"<"}
             </div>
             <div class="list-trend">
+            {this.state.data.map(i=>
             <div class="item-trend">
-            <img src="https://media.vov.vn/uploaded/9eqrbt2uv7o/2019_06_23/poster_szfr.jpg"/>
+            <img src={i.img}/>
             <div class="detail-trend">
-            <p><b>Tình trạng:</b> Đang công chiếu</p>
-            <h2>Spider Man</h2>
-            <p><b>Thể loại:</b> Tình cảm, lãng mạng</p>
+            <p><b>Tình trạng:</b> {i.tinhtrang}</p>
+            <h2>{i.name}</h2>
+            <p><b>Thể loại:</b> {i.theloai}</p>
             <button>MUA VÉ NGAY!</button>
             </div>
+            </div>
+            )}
             
             </div>
-            <div class="item-trend">
-            <img src="https://i.pinimg.com/originals/30/a4/65/30a465d7c817d81dcfeeb7c834d9dc1f.jpg"/>
-            <div class="detail-trend">
-            <p><b>Tình trạng:</b> Đang công chiếu</p>
-            <h2>Your Name</h2>
-            <p><b>Thể loại:</b> Tình cảm, siêu nhiên</p>
-            <button>MUA VÉ NGAY!</button>
-            </div>
-            
-            </div>
-            
-            <div class="item-trend">
-            <img src="https://i.pinimg.com/736x/7b/38/d1/7b38d1c0be306607939d132170eb65b2.jpg"/>
-            <div class="detail-trend">
-            <p><b>Tình trạng:</b> Đang công chiếu</p>
-            <h2>Tamako love story</h2>
-            <p><b>Thể loại:</b> Tình cảm, siêu nhiên</p>
-            <button>MUA VÉ NGAY!</button>
-            </div>
-            
-            </div>
-            <div class="item-trend">
-            <img src="https://venturology.files.wordpress.com/2017/01/2-1024x631.jpg"/>
-            <div class="detail-trend">
-            <p><b>Tình trạng:</b> Đang công chiếu</p>
-            <h2>Your Name</h2>
-            <p><b>Thể loại:</b> Tình cảm, siêu nhiên</p>
-            <button>MUA VÉ NGAY!</button>
-            </div>
-            
-            </div>
-            <div class="item-trend">
-            <img src="https://venturology.files.wordpress.com/2017/01/2-1024x631.jpg"/>
-            <div class="detail-trend">
-            <p><b>Tình trạng:</b> Đang công chiếu</p>
-            <h2>Your Name</h2>
-            <p><b>Thể loại:</b> Tình cảm, siêu nhiên</p>
-            <button>MUA VÉ NGAY!</button>
-            </div>
-            
-            </div>
-            </div>
+           
             </div>
         )
     }

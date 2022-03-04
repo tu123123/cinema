@@ -13,6 +13,27 @@ class newmovie extends React.Component{
         scroll2.scrollLeft=x-269;
         
     }
+    state={
+        data:[
+            {
+                
+            }
+        ]
+    }
+    componentDidMount(){
+     
+        fetch("http://localhost:8000/movie")
+        .then(res=>{
+            return res.json()
+               })
+        .then(res=>{
+                this.setState({
+                    data:res
+                })
+                
+                   }) 
+    
+    }
     render(){
         return(
             <div class="newMovie">
@@ -24,53 +45,19 @@ class newmovie extends React.Component{
             {"<"}
             </div>
 <div class="list-trend">
-<div class="item-trend">
+{this.state.data.map(i=>
+i.tinhtrang!="Chưa chiếu"?
+            <div class="item-trend">
+            <img src={i.img}/>
+            <div class="detail-trend">
+            <p><b>Tình trạng:</b> {i.tinhtrang}</p>
+            <h2>{i.name}</h2>
+            <p><b>Thể loại:</b> {i.theloai}</p>
+            <button>MUA VÉ NGAY!</button>
+            </div>
+            </div>:""
+            )}
 
-<img src="https://i.pinimg.com/originals/30/a4/65/30a465d7c817d81dcfeeb7c834d9dc1f.jpg"/>
-<div class="detail-trend">
-<p><b>Tình trạng:</b> Đang công chiếu</p>
-<h2>Your Name</h2>
-<p><b>Thể loại:</b> Tình cảm, siêu nhiên</p>
-<button>MUA VÉ NGAY!</button>
-</div>
-</div>
-
-<div class="item-trend">
-<img src="http://i.truyentranh8.net/2020/06-25/9ae1390e6f7702b7200373db00dda33b.jpg"/>
-<div class="detail-trend">
-<p><b>Tình trạng:</b> Đang công chiếu</p>
-<h2>TenKi No Ko</h2>
-<p><b>Thể loại:</b>  hành động</p>
-<button>MUA VÉ NGAY!</button>
-</div>
-</div>
-<div class="item-trend">
-<img src="https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2020/11/josee_the_tiger_and-the-fish-1.jpg?resize=696%2C986&ssl=1"/>
-<div class="detail-trend">
-<p><b>Tình trạng:</b> Đang công chiếu</p>
-<h2>Josee, The Tiger and The Fish</h2>
-<p><b>Thể loại:</b>  hành động</p>
-<button>MUA VÉ NGAY!</button>
-</div>
-</div>
-<div class="item-trend">
-<img src="http://i.truyentranh8.net/2020/06-25/9ae1390e6f7702b7200373db00dda33b.jpg"/>
-<div class="detail-trend">
-<p><b>Tình trạng:</b> Đang công chiếu</p>
-<h2>TenKi No Ko</h2>
-<p><b>Thể loại:</b>  hành động</p>
-<button>MUA VÉ NGAY!</button>
-</div>
-</div>
-<div class="item-trend">
-<img src="http://i.truyentranh8.net/2020/06-25/9ae1390e6f7702b7200373db00dda33b.jpg"/>
-<div class="detail-trend">
-<p><b>Tình trạng:</b> Đang công chiếu</p>
-<h2>TenKi No Ko</h2>
-<p><b>Thể loại:</b>  hành động</p>
-<button>MUA VÉ NGAY!</button>
-</div>
-</div>
 </div>
 </div>
 
