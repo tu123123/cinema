@@ -6,6 +6,7 @@ class ticker extends React.Component{
         time:"",
         ghe:"",
         combo:"",
+        total:0,
     }
     buyClick=(a)=>{
         this.setState(
@@ -19,6 +20,7 @@ class ticker extends React.Component{
             {
         time:"",
         ghe:"",
+       
         combo:"",
             }
         )
@@ -45,7 +47,7 @@ class ticker extends React.Component{
 
 }
     componentDidUpdate(){
-       
+     
         if(this.state.time==""){
             
             document.querySelector('.time').style.display="none";
@@ -77,7 +79,8 @@ class ticker extends React.Component{
         this.setState(
             {
                 time:"",
-                ghe:""
+                ghe:"",
+                total:0
             }
         )
     }
@@ -96,6 +99,7 @@ class ticker extends React.Component{
         this.setState(
             {
                 ghe:c,
+                total:c.split(',').length*45
             }
         )
     }
@@ -103,11 +107,13 @@ class ticker extends React.Component{
         this.state.ghe==""?  this.setState(
             {
                 ghe:a,
+                total:(this.state.ghe.split(",").length)*45,
             }
         ):
         this.setState(
             {
                 ghe:this.state.ghe+","+a,
+                total:(this.state.ghe.split(",").length+1)*45,
             }
         )
     }
@@ -160,8 +166,9 @@ class ticker extends React.Component{
                 </div>
                 <div className="b-t-cart">
                 <div className="cart-items">
-                    <div className="time">Xuất chiếu : {this.state.time} <p onClick={()=>this.deletetime()} className="close2">x</p></div>
+                    <div className="time">Xuất chiếu : {this.state.time}<p onClick={()=>this.deletetime()} className="close2">x</p></div>
                     <div className="ghe">Số ghế đã chọn : {this.state.ghe.split(',').map((i)=> <div className="time2">{i} <p className="close2" onClick={()=>this.deleteghe("12h")}>x</p></div>)}</div>
+                    <div>Tổng tiền: {this.state.total} ,000 </div>
                     <button>XÁC NHẬN MUA</button>
                     </div>
                     
