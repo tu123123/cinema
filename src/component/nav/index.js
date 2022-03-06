@@ -19,7 +19,6 @@ WibuCinema
 <li>DIỄN ĐÀN</li>
 <li>LỊCH CHIẾU</li>
 <li>PHIM SẮP RA MẮT</li>
-<li>LỊCH CHIẾU</li>
 <li>RẠP/GIÁ</li>
 <li>GIỚI THIỆU </li>
 <li>LIÊN HỆ</li>

@@ -2,6 +2,7 @@ import React from "react";
 import './detail.css';
 import { withRouter } from "react-router-dom";
 import Content from '../content';
+import BuyTicker from '../buyTicker';
 class main extends React.Component{
     state={
         data:[]
@@ -22,7 +23,7 @@ class main extends React.Component{
     
     
     }
-    
+   
 render(){
     console.log(this.state.data)
   
@@ -32,10 +33,11 @@ render(){
 {
     this.state.data.map(i=>
         <><img class="bg" src={i.bg}/><div class="containerContent">
+        <BuyTicker name={i.name}/>
             <div class="imgDetail">
                 <img src={i.img} />
             </div>
-
+            
             <Content name={i.name} detail={i.detail} tacgia={i.tacgia}/>
 
         </div></>    )
