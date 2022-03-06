@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 class trend extends React.Component{
     scrollTrend=(a)=>{
         var scroll2=document.querySelector(""+a+"");
@@ -21,14 +21,7 @@ class trend extends React.Component{
         ]
     }
     componentDidMount(){
-        setInterval(() => {
-            var scroll2=document.querySelector(".list-trend");
-        var x=scroll2.scrollLeft;
-        if(x>1000){
-            scroll2.scrollLeft=0;
-        }
-       scroll2.scrollLeft=x+269;  
-        }, 3000);
+        
         fetch("http://localhost:8000/movie")
         .then(res=>{
             return res.json()
@@ -42,6 +35,17 @@ class trend extends React.Component{
     
     }
     render(){
+        setInterval(() => {
+            var scroll2=document.querySelector(".list-trend");
+        var x=scroll2.scrollLeft;
+        if( x>scroll2.scrollWidth){
+            scroll2.scrollLeft=0;
+        }
+        else{
+            scroll2.scrollLeft=x+269; 
+        }
+       
+        }, 3000);
         return(
             <div  class="trending">
 
@@ -54,15 +58,17 @@ class trend extends React.Component{
             </div>
             <div class="list-trend">
             {this.state.data.map(i=>
+               
             <div class="item-trend">
             <img src={i.img}/>
             <div class="detail-trend">
             <p><b>Tình trạng:</b> {i.tinhtrang}</p>
             <h2>{i.name}</h2>
             <p><b>Thể loại:</b> {i.theloai}</p>
-            <button>MUA VÉ NGAY!</button>
+            <Link to={{pathname:`/detail/${i.name}`}} ><button>MUA VÉ NGAY!</button> </Link>
             </div>
             </div>
+           
             )}
             
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 class newmovie extends React.Component{
     scrollTrend=(a)=>{
         var scroll2=document.querySelector(""+a+"");
@@ -47,16 +47,17 @@ class newmovie extends React.Component{
 <div class="list-trend">
 {this.state.data.map(i=>
 i.tinhtrang!="Chưa chiếu"?
+
             <div class="item-trend">
             <img src={i.img}/>
             <div class="detail-trend">
             <p><b>Tình trạng:</b> {i.tinhtrang}</p>
             <h2>{i.name}</h2>
             <p><b>Thể loại:</b> {i.theloai}</p>
-            <button>MUA VÉ NGAY!</button>
+            <Link to={{pathname:`/detail/${i.name}`}} ><button>MUA VÉ NGAY!</button></Link>
             </div>
-            </div>:""
-            )}
+            </div>  :""
+          )}
 
 </div>
 </div>

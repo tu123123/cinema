@@ -36,7 +36,7 @@ render(){
                 <img src={i.img} />
             </div>
 
-            <Content name={i.name} detail={i.detail} />
+            <Content name={i.name} detail={i.detail} tacgia={i.tacgia}/>
 
         </div></>    )
 }

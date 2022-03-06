@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 class head extends React.Component{
 
     render(){
@@ -11,7 +11,7 @@ class head extends React.Component{
 <p><b>Tình trạng:</b> Đang công chiếu</p>
 <h2>Your Name</h2>
 <p><b>Thể loại:</b> Tình cảm, siêu nhiên</p>
-<button>MUA VÉ NGAY!</button>
+<Link to={{pathname:`/detail/Your Name`}} ><button>MUA VÉ NGAY!</button></Link>
 </div>
 </div>
 </div>
