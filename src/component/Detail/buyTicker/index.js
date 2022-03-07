@@ -9,13 +9,6 @@ class ticker extends React.Component{
         total:0,
         data:""
     }
-    buyClick=(a)=>{
-        this.setState(
-            {
-                time:a
-            }
-        )
-    }
     delete=()=>{
         this.setState(
             {
@@ -48,9 +41,12 @@ class ticker extends React.Component{
 }
     componentDidUpdate(){
       
-      
+        let b=document.querySelectorAll('.soghe');
+        for(let i=0;i<b.length;i++){
+            b[i].style.color="white";
+        }
         if(this.state.time==""){
-            
+           
             document.querySelector('.time').style.display="none";
             document.querySelector('.cart-items').style.display="none";
         }
@@ -84,6 +80,10 @@ class ticker extends React.Component{
                 total:0
             }
         )
+        let b=document.querySelectorAll('.soghe');
+        for(let i=0;i<b.length;i++){
+            b[i].style.color="white";
+        }
     }
     deletetime=()=>{
         this.setState(
@@ -93,6 +93,7 @@ class ticker extends React.Component{
                 total:0
             }
         )
+        
 
     }
     deleteghe=(b)=>{
@@ -120,7 +121,7 @@ class ticker extends React.Component{
     buyClick2=(a)=>{
         
            
-            if(this.state.ghe.split(',').filter(i=>i==a).length==0){
+            if(this.state.ghe.split(',').filter(i=>i==a).length==0 && this.state.time!=""){
                   
         this.state.ghe==""?  this.setState(
             {
@@ -164,7 +165,7 @@ class ticker extends React.Component{
                         <legend> GHẾ NGỒI</legend>
                         <ul>
                         {this.props.soghe.split(',').map(item=>
-                            <li id={item} onClick={()=> this.buyClick2(item)}>{item}</li>
+                            <li className="soghe" id={item} onClick={()=> this.buyClick2(item)}>{item}</li>
                          
                      )}
                            
