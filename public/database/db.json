@@ -1,6 +1,7 @@
 {
     "movie":[
-        {
+        {   "xuatchieu":"12h,12h30,1h",
+            "soghe":"1,2,3,4,5,6,7,8,9,9a,9b,9c",
             "bg":"https://c4.wallpaperflare.com/wallpaper/561/827/585/anime-cross-road-wallpaper-preview.jpg",
             "name":"Cross Road",
             "tacgia":"Shinkai Makoto",
@@ -18,7 +19,10 @@
             "time":"12/2/2242",
             "tacgia":"Jon Watts",
             "tinhtrang":"Đang Công chiếu",
-            "theloai":"tình cảm, lãng mạng"
+            "theloai":"tình cảm, lãng mạng",
+            "soghe":"1,2,3,4,5,6,7,8,9,9a,9b,9c",
+            "xuatchieu":"12h,12h30,1h"
+            
         },
         {
             "name":"Your Name",
@@ -28,6 +32,8 @@
             "detail":"Your Name – Tên cậu là gì? là một bộ phim điện ảnh hoạt hình Nhật Bản thuộc thể loại tình cảm lãng mạn, kỳ ảo, chính kịch do Shinkai Makoto làm đạo diễn. Phim do hãng CoMix Wave Films sản xuất và Toho phát hành",
             "time":"12/2/2242",
             "tinhtrang":"Đang Công chiếu",
+            "soghe":"1,2,3,4,5,6,7,8,9,9a,9b,9c",
+            "xuatchieu":"12h,12h30,1h",
             "theloai":"tình cảm, lãng mạng"
         },
         {
@@ -38,15 +44,19 @@
             "time":"12/2/2242",
             "tacgia":"Shinkai Makoto",
             "tinhtrang":"Đang Công chiếu",
+            "xuatchieu":"12h,12h30,1h",
+            "soghe":"1,2,3,4,5,6,7,8,9,9a,9b,9c",
             "theloai":"tình cảm, lãng mạng"
         },    {
             "name":"Tamako love story",
+            "soghe":"1,2,3,4,5,6,7,8,9,9a,9b,9c",
             "tacgia":"Mutsuki Ichinose",
             "img":"https://i.pinimg.com/736x/7b/38/d1/7b38d1c0be306607939d132170eb65b2.jpg",
             "detail":"Câu chuyện xoay quanh Tamako, lúc này là nữ sinh cao trung cuối cấp. Cô nàng dự định tiếp tục theo nghề truyền thống của gia đình – làm bánh mochi sau khi tốt nghiệp cao trung, và sau này sẽ tiếp quản tiệm bánh từ cha. Đối diện nhà Tamako là nhà cậu bạn Mochizou, cũng có truyền thống làm mochi lâu đời.",
             "bg":"https://ecdn.game4v.com/g4v-content/uploads/2020/02/tamako-love-story-8.png",
             "time":"12/2/2242",
             "tinhtrang":"Chưa chiếu",
+            "xuatchieu":"12h,12h30,1h",
             "theloai":"tình cảm, lãng mạng"
         },
         {
@@ -57,6 +67,8 @@
             "detail":"Josee, Tiger and the Fish là một câu chuyện tình yêu giữa cô gái khuyết tật 24 tuổi - Josee gần như sống cả đời trên chiếc xe lăn và một cậu sinh viên 22 tuổi sắp ra trường với nhiều hoài bão. Một ngày, Tsuneo - người luôn bận rộn giữa việc học, giành học bổng cho chuyên ngành sinh vật biển và chật vật với công việc làm thêm kiếm thêm thu nhập, sau khi đi làm về bỗng gặp phải tình huống trớ trêu. Ở đâu trên con dốc cao một cô gái ngồi xe lăn đang lao xuống với tốc độ bàn thờ, may mắn thay cậu đã đỡ kịp và cứu lấy cô. Tưởng rằng đây là một va chạm đáng yêu tình cờ như bao chuyện tình khác, nhưng không cô nàng mắng mỏ anh là đồ hentai (biến thái) rồi cục cằn trên suốt đường về. Sau ngày hôm đó, bà của Josee ngỏ lời muốn Tsuneo thành người trông coi và hỗ trợ cho cháu gái mình. Liệu rằng công việc làm thêm mới này có dễ dàng với cậu sinh viên?",
             "time":"12/2/2242",
             "tinhtrang":"Đang Công chiếu",
+            "xuatchieu":"12h,12h30,1h",
+            "soghe":"1,2,3,4,5,6,7,8,9,9a,9b,9c",
             "theloai":"tình cảm, lãng mạng"
         },
         {
@@ -67,6 +79,8 @@
             "tacgia":"Torii Nagomu",
             "time":"12/4/2242",
             "tinhtrang":"Chưa chiếu",
+            "xuatchieu":"12h,12h30,1h",
+            "soghe":"1,2,3,4,5,6,7,8,9,9a,9b,9c",
             "theloai":"tình cảm, lãng mạng"
         },
         {
@@ -77,6 +91,8 @@
             "detail":"Wonder Egg Priority là câu chuyện kể về Ai, một cô gái sống nội tâm có số phận bị thay đổi vĩnh viễn khi cô ấy mua được một “Wonder Egg” bí ẩn từ một trò chơi điện tử hoang vắng.",
             "time":"12/2/2242",
             "tinhtrang":"Chưa chiếu",
+            "xuatchieu":"12h,12h30,1h",
+            "soghe":"1,2,3,4,5,6,7,8,9,9a,9b,9c",
             "theloai":"Kinh dị"
         },
         {
@@ -87,6 +103,8 @@
             "detail":"Câu chuyện xoay quanh cậu học sinh Kotarou Azumi và cô bé Akane Mizuno cùng lớp, cùng với đó là gia đình, bạn bè và hàng xóm xung quanh họ. Bắt đầu từ những phút giây vô tình chạm mặt, rồi để ý đến nhau, rồi thổ lộ và hẹn hò cùng nhau, trao nhau nụ hôn đầu đời...",
             "time":"12/2/2242",
             "tinhtrang":"đang chiếu",
+            "soghe":"1,2,3,4,5,6,7,8,9,9a,9b,9c",
+            "xuatchieu":"12h,12h30,1h",
             "theloai":"Tình cảm"
         },
         {
@@ -97,6 +115,8 @@
             "time":"12/2/2242",
             "tacgia":"Kumeta Kouji",
             "tinhtrang":"đang chiếu",
+            "xuatchieu":"12h,12h30,1h",
+            "soghe":"1,2,3,4,5,6,7,8,9,9a,9b,9c",
             "theloai":"Tình cảm"
         }
     ]

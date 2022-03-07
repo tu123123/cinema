@@ -7,6 +7,7 @@ class ticker extends React.Component{
         ghe:"",
         combo:"",
         total:0,
+        data:""
     }
     buyClick=(a)=>{
         this.setState(
@@ -27,7 +28,7 @@ class ticker extends React.Component{
     }
     
     componentDidMount(){
-      
+       
         if(this.state.time==""){
             
             document.querySelector('.time').style.display="none";
@@ -44,10 +45,10 @@ class ticker extends React.Component{
             document.querySelector('.ghe').style.display="block";
         }
       
-
 }
     componentDidUpdate(){
-     
+      
+      
         if(this.state.time==""){
             
             document.querySelector('.time').style.display="none";
@@ -59,19 +60,28 @@ class ticker extends React.Component{
         }
         if(this.state.ghe==""){
             document.querySelector('.ghe').style.display="none";
+           
         }
         else{
             document.querySelector('.ghe').style.display="block";
+            this.state.ghe.split(',').map(i=>{
+                document.getElementById(i).style.color="red";
+                }
+                )
+           
         }
     }
     close=()=>{
         document.querySelector('.b-t').style.display="none";
         this.delete();
     }
+    // eslint-disable-next-line no-dupe-class-members
     buyClick=(a)=>{
         this.setState(
             {
-                time:a
+                time:a,
+                ghe:"",
+                total:0
             }
         )
     }
@@ -83,6 +93,7 @@ class ticker extends React.Component{
                 total:0
             }
         )
+
     }
     deleteghe=(b)=>{
         let c="";
@@ -102,8 +113,15 @@ class ticker extends React.Component{
                 total:c.split(',').length*45
             }
         )
+        this.state.ghe.split(',').map(i=>{
+            document.getElementById(i).style.color="white";}
+            )
     }
     buyClick2=(a)=>{
+        
+           
+            if(this.state.ghe.split(',').filter(i=>i==a).length==0){
+                  
         this.state.ghe==""?  this.setState(
             {
                 ghe:a,
@@ -116,7 +134,13 @@ class ticker extends React.Component{
                 total:(this.state.ghe.split(",").length+1)*45,
             }
         )
-    }
+            }    
+            }
+                
+        
+      
+      
+    
     render() {
        
         return (
@@ -127,30 +151,25 @@ class ticker extends React.Component{
                     <h1> {this.props.name}</h1>
                     <fieldset>
                         <legend> KHUNG GIỜ</legend>
-                        <ul>
-                            <li onClick={()=> this.buyClick("12h")}> 12h</li>
-                            <li> 12h</li>
-                            <li> 12h</li>
-                            <li> 12h</li>
-                            <li> 12h</li>
-                            <li> 12h</li>
+                        <ul>   
+                        {this.props.xuatchieu.split(',').map(item=>
+                            <li onClick={()=>this.buyClick(item)}>{item}</li>
+                         
+                     )}
+                   
                         </ul>
                     </fieldset>
                     
                     <fieldset>
                         <legend> GHẾ NGỒI</legend>
                         <ul>
-                            <li onClick={()=> this.buyClick2("12h")}> 12h</li>
-                            <li  onClick={()=> this.buyClick2("122h")}> 12h</li>
-                            <li> 12h</li>
-                            <li> 1242h</li>
-                            <li> 12h</li>
-                            <li> 142h</li>
-                            <li> 12h</li>
-                            <li> 12h</li>
-                            <li> 12h</li>
-                            <li> 12h</li>
-                            <li> 12h</li>
+                        {this.props.soghe.split(',').map(item=>
+                            <li id={item} onClick={()=> this.buyClick2(item)}>{item}</li>
+                         
+                     )}
+                           
+                            
+                            
                         </ul>
                     </fieldset>
                     <fieldset>
@@ -167,7 +186,7 @@ class ticker extends React.Component{
                 <div className="b-t-cart">
                 <div className="cart-items">
                     <div className="time">Xuất chiếu : {this.state.time}<p onClick={()=>this.deletetime()} className="close2">x</p></div>
-                    <div className="ghe">Số ghế đã chọn : {this.state.ghe.split(',').map((i)=> <div className="time2">{i} <p className="close2" onClick={()=>this.deleteghe("12h")}>x</p></div>)}</div>
+                    <div className="ghe">Số ghế đã chọn : {this.state.ghe.split(',').map((i)=> <div className="time2">{i} <p className="close2" onClick={()=>this.deleteghe(i)}>x</p></div>)}</div>
                     <div>Tổng tiền: {this.state.total} ,000 </div>
                     <button>XÁC NHẬN MUA</button>
                     </div>

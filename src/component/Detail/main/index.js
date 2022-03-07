@@ -33,12 +33,12 @@ render(){
 {
     this.state.data.map(i=>
         <><img class="bg" src={i.bg}/><div class="containerContent">
-        <BuyTicker name={i.name}/>
+        <BuyTicker name={i.name} xuatchieu={i.xuatchieu} soghe={i.soghe}/>
             <div class="imgDetail">
                 <img src={i.img} />
             </div>
             
-            <Content name={i.name} detail={i.detail} tacgia={i.tacgia}/>
+            <Content name={i.name} detail={i.detail} tacgia={i.tacgia} />
 
         </div></>    )
 }

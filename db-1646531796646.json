@@ -1,9 +1,10 @@
 {
   "movie": [
     {
+      "bg": "https://c4.wallpaperflare.com/wallpaper/561/827/585/anime-cross-road-wallpaper-preview.jpg",
       "name": "Cross Road",
       "img": "https://i.pinimg.com/originals/fc/c2/15/fcc215e7f62218e77f2758380b199d40.jpg",
-      "detail": "",
+      "detail": "Câu chuyện kể về 2 học sinh trung học Miho và Shota đang trong quá trình cày cuốc điên cuồng để chuẩn bị cho kì thi đầu vào đại học.",
       "time": "12/2/2142",
       "tinhtrang": "Chưa chiếu",
       "theloai": "tình cảm, lãng mạng"
