@@ -1,5 +1,6 @@
 import React from "react";
 import '../buyTicker/buyTicker.css';
+
 class ticker extends React.Component{
     
     state={
@@ -56,10 +57,11 @@ class ticker extends React.Component{
         }
         if(this.state.ghe==""){
             document.querySelector('.ghe').style.display="none";
-           
+            document.querySelector('button').style.display="none";
         }
         else{
             document.querySelector('.ghe').style.display="block";
+            document.querySelector('button').style.display="block";
             this.state.ghe.split(',').map(i=>{
                 document.getElementById(i).style.color="red";
                 }
@@ -148,6 +150,9 @@ class ticker extends React.Component{
             
              <div className="b-t">
                 <div className="close" onClick={()=>this.close()}>X</div>
+                < div class="b-t-a">
+                <img src={this.props.src}/>
+                </div>
                 <div className="b-t-child">
                     <h1> {this.props.name}</h1>
                     <fieldset>
@@ -193,6 +198,7 @@ class ticker extends React.Component{
                     </div>
                     
                 </div>
+                
              </div>
         );
     }
