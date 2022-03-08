@@ -6,7 +6,9 @@
 	text-decoration: none;
 	user-select: none;
 }
-
+::-webkit-scrollbar {
+	display: none;
+  }
 
 button,li{
 	cursor:pointer;
