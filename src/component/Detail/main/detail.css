@@ -62,16 +62,21 @@
 	margin-top: 100px;
 	position: absolute;
 	right:0;
+	display:none;
     height:600px;
     width:600px;
 	z-index: 2;
-	transform: translateX(2000px);
 	border: 5px solid white;
 	border-radius: 26px;
 	padding: 20px;
 	transition: 0.5s;
+	animation: trailer 0.5s;
 }
-
+@keyframes trailer{
+	0%{
+		transform: translateX(2000px);
+	}
+}
 .trailer iframe{
 	height: 100%;
     width: 100%;

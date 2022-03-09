@@ -1,14 +1,38 @@
 import React from "react";
 
 class ct extends React.Component{
+    state={
+        movie:[{
+            id:200000
+        }]
+     
+    }
     bt=()=>{
-        document.querySelector('.trailer').style.transform="translateX(2000px)";
+        document.querySelector('.trailer').style.display="none"
         document.querySelector('.b-t').style.display="flex";
     }
     openTrailer=()=>{
-        document.querySelector('.trailer').style.transform=="translateX(0px)"?
-        document.querySelector('.trailer').style.transform="translateX(2000px)":
-        document.querySelector('.trailer').style.transform="translateX(0px)";
+        document.querySelector('.trailer').style.display=="block"?
+        document.querySelector('.trailer').style.display="none":
+        document.querySelector('.trailer').style.display="block";
+    }
+    add=async()=>{
+         await fetch('http://localhost:8000/movie/b',{
+            method:'PUT',
+            headers:{"Content-type":"application/json"},
+            body:JSON.stringify({
+                S:"this.state.movie"
+            }
+               
+            )
+        })
+        .then(response => response.json())
+.then(data => {
+  console.log('Success:', data);
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
     }
 render(){
     return(

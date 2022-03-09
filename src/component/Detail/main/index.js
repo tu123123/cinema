@@ -42,7 +42,7 @@ render(){
             <Content name={i.name} detail={i.detail} tacgia={i.tacgia} />
 
         </div>
-        <Trailer/>
+        <Trailer src={i.trailer}/>
         </>    )
 }
 

@@ -1,9 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
 class nav extends React.Component{
-
-
+    state={
+        user:[]
+    }
+    componentDidMount(){
+      // eslint-disable-next-line no-lone-blocks
+      {
+            fetch('http://localhost:8000/user/1')
+            .then(res=>res.json())
+            .then(res=>{
+                this.setState({
+                   user:res
+                })
+            })
+        
+    }
+}
+    
     render(){
+        console.log(this.state.user)
         return(
             <div class="nav">
 <div class="title">
@@ -25,12 +41,15 @@ WibuCinema
 </ul>
 </div>
 <div>
-<ul>
+
+    <ul>
 <li>
-<div class="avatar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSz8wBuJJTefVDZLyw0jNEXrEFRhHRFqnRixNzycZNDXimZyzTdrRzU9F49J8X61-yg5k&usqp=CAU"/></div></li>
-<li>Admin</li>
-<li class ="cart">Giỏ hàng<div>1</div></li>
+<div class="avatar"><img src={this.state.user.avatar}/></div></li>
+<li>{this.state.user.name}</li>
+<li class ="cart">Giỏ hàng<div>{this.state.user.cart}</div></li>
 </ul>
+
+
 </div>
 </div>
         )
