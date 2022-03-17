@@ -14,7 +14,10 @@ button,li{
 	cursor:pointer;
 }
 .App{
+	background-color: black;
 	width:100%;
+	display: flex;
+	justify-content: center;
 }
 Link{
 	
@@ -83,6 +86,13 @@ li{
 	justify-content:center;
 	padding:10px;
 	transition:0.5s;
+}
+.Link{
+	height: 100%;
+	width: 100%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
 }
 LI:HOVER{
 	background-color:rgb(123,241,231,0.4);

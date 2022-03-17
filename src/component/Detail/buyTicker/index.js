@@ -139,8 +139,21 @@ class ticker extends React.Component{
         )
             }    
             }
-                
-        
+ 
+        addTicker=async()=>{
+           await fetch("http://localhost:8000/user/1",{
+            
+                method:'put',
+                headers: {
+                    'Accept':'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body:JSON.stringify({
+                    cart:[this.state]
+                })
+                }
+            )
+        }
       
       
     
@@ -194,7 +207,7 @@ class ticker extends React.Component{
                     <div className="time">Xuất chiếu : {this.state.time}<p onClick={()=>this.deletetime()} className="close2">x</p></div>
                     <div className="ghe">Số ghế đã chọn : {this.state.ghe.split(',').map((i)=> <div className="time2">{i} <p className="close2" onClick={()=>this.deleteghe(i)}>x</p></div>)}</div>
                     <div>Tổng tiền: {this.state.total} ,000 </div>
-                    <button>XÁC NHẬN MUA</button>
+                    <button onClick={()=>this.addTicker()}>XÁC NHẬN MUA</button>
                     </div>
                     
                 </div>

@@ -1,12 +1,24 @@
 {
-    "user":[
+  "user": [
+    {
+      "cart": [
         {
-            "id":"1",
-            "name":"admin",
-            "avatar":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSz8wBuJJTefVDZLyw0jNEXrEFRhHRFqnRixNzycZNDXimZyzTdrRzU9F49J8X61-yg5k&usqp=CAU",
-            "cart":2
+          "time": "12h",
+          "ghe": "8,9a",
+          "combo": "",
+          "total": 90,
+          "data": ""
         }
-    ],
+      ],
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "admin",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSz8wBuJJTefVDZLyw0jNEXrEFRhHRFqnRixNzycZNDXimZyzTdrRzU9F49J8X61-yg5k&usqp=CAU",
+      "cart": 2
+    }
+  ],
   "movie": [
     {
       "xuatchieu": "12h,12h30,1h",
@@ -126,17 +138,16 @@
       "trailer": "https://www.youtube.com/embed/-3_hwxNg4b8"
     },
     {
-        "name":"Kakushigoto",
-        "bg":"https://animecorner.me/wp-content/uploads/2020/06/Kakushigoto.jpg",
-        "img":"https://i.pinimg.com/564x/85/64/c6/8564c67c79f06cb874bd321a01c217a1.jpg",
-        "detail":"Nhân vật chính của chúng ta tên là Kakushi Goto (chơi chữ), làm nghề họa sĩ truyện tranh. Anh có một cô con gái tên Hime Goto, 2 cha con vô cùng thương yêu nhau. Chuyện sẽ không có gì đáng nói nếu như anh chẳng phải bằng mọi cách, cố gắng giấu đi một bí mật với con gái mình",
-        "time":"12/2/2242",
-        "tacgia":"Kumeta Kouji",
-        "tinhtrang":"đang chiếu",
-        "xuatchieu":"12h,12h30,1h",
-        "soghe":"1,2,3,4,5,6,7,8,9,9a,9b,9c",
-        "theloai":"Tình cảm"
+      "name": "Kakushigoto",
+      "bg": "https://animecorner.me/wp-content/uploads/2020/06/Kakushigoto.jpg",
+      "img": "https://i.pinimg.com/564x/85/64/c6/8564c67c79f06cb874bd321a01c217a1.jpg",
+      "detail": "Nhân vật chính của chúng ta tên là Kakushi Goto (chơi chữ), làm nghề họa sĩ truyện tranh. Anh có một cô con gái tên Hime Goto, 2 cha con vô cùng thương yêu nhau. Chuyện sẽ không có gì đáng nói nếu như anh chẳng phải bằng mọi cách, cố gắng giấu đi một bí mật với con gái mình",
+      "time": "12/2/2242",
+      "tacgia": "Kumeta Kouji",
+      "tinhtrang": "đang chiếu",
+      "xuatchieu": "12h,12h30,1h",
+      "soghe": "1,2,3,4,5,6,7,8,9,9a,9b,9c",
+      "theloai": "Tình cảm"
     }
- 
   ]
 }

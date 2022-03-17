@@ -15,6 +15,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "star":"npx json-server -w public/database/db.json -p 8000",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
