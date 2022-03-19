@@ -4,14 +4,14 @@ import Main from './component/home/main';
 import Nav from './component/nav';
 import Detail from './component/Detail/main';
 import Login from './component/login/loginForm';
-import { Switch,Route } from 'react-router-dom';
+import { Switch,Route ,BrowserRouter} from 'react-router-dom';
 import Social from './component/social';
 function App() {
   
   
 
   return (
-  
+    <BrowserRouter>
     <div className='App' >
       <Nav />
       <Switch>
@@ -23,6 +23,8 @@ function App() {
      
      
     </div>
+
+    </BrowserRouter>
 
   );
 }
